@@ -1,4 +1,7 @@
 name: build container
+permissions:
+  contents: read
+  packages: write 
 on: 
   # triggered by user action only
   workflow_dispatch:
