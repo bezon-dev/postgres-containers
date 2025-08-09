@@ -1,23 +1,23 @@
 name: build container
 permissions:
   contents: read
-  packages: write 
-on: 
+  packages: write
+on:
   # triggered by user action only
   workflow_dispatch:
     inputs:
       PG_VERSION:
         description: 'Postgres version'
         required: true
-        default: '15.3'
+        default: '17.5'
       EXTENSIONS:
         description: 'Postgres extensions to install'
         required: true
-        default: 'cron timescaledb'
+        default: 'timescaledb'
       TIMESCALEDB_VERSION:
         description: 'TimescaleDB version'
         required: true
-        default: '2.11.0'
+        default: '2.21.2'
 jobs:
   build:
     runs-on: ubuntu-latest

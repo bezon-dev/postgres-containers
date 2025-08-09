@@ -1,7 +1,7 @@
 # add extensions to cnpg postgresql image: timescaledb, pg_cron
-ARG POSTGRESQL_VERSION=15.3
-ARG EXTENSIONS="timescaledb cron"
-ARG TIMESCALEDB_VERSION=2.11.0
+ARG POSTGRESQL_VERSION=17.5
+ARG EXTENSIONS="timescaledb"
+ARG TIMESCALEDB_VERSION=2.21.2
 
 
 FROM ghcr.io/cloudnative-pg/postgresql:${POSTGRESQL_VERSION}
